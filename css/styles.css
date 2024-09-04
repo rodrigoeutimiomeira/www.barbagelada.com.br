@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('caminho/para/sua/imagem-de-fundo.jpg');
+    background-image: url('../img/background.jpg');
     background-size: cover;
     color: #fff;
 }
