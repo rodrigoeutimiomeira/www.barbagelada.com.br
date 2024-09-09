@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Barbagelata</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Vídeo de Fundo -->
+    <video id="background-video" src="imagens/fundox.mp4" autoplay loop muted></video>
+
+    <!-- Áudio -->
+    <audio id="background-music" src="mp3/capaaudi.mp3" autoplay loop></audio>
+
+    <!-- Botão de Controle de Música -->
+    <div id="audio-controls">
+        <button id="toggle-audio">Play</button>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h1>BARBEARIA BARBAGELATA</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=(11) 91000-2248" target="_blank">WhatsApp</a></li>
+                <li><a href="17999999999">Ligue</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#contato">Entre em Contato</a></li>
+                <li><a href="https://www.zztop.com/tour" target="_blank">Nosso Canal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="whatsapp" class="section">
+            <h2>Seja Bem Vindo!</h2>
+        </section>
+
+        <section id="sobre-nos" class="section">
+            <h2>Sobre Nós</h2>
+            <p>Na Barberia Barbagelata, nossa prioridade é oferecer cortes impecáveis e cuidados especiais para homens. Com uma década de experiência, nos dedicamos a criar momentos exclusivos e personalizados para cada cliente.</p>
+            
+            <div class="image-gallery">
+                <img src="imagens/img001.png" alt="Descrição da Imagem 1">
+                <img src="imagens/img002.png" alt="Descrição da Imagem 2">
+                <img src="imagens/img003.png" alt="Descrição da Imagem 3">
+            </div>
+        </section>
+
+        <section id="contato" class="section">
+            <h2>Entre em Contato</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Barberia Barbagelata</p>
+    </footer>
+
+    <script>
+        // JavaScript para controle de áudio
+        const audio = document.getElementById('background-music');
+        const toggleButton = document.getElementById('toggle-audio');
+
+        toggleButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                toggleButton.textContent = 'Pausar';
+            } else {
+                audio.pause();
+                toggleButton.textContent = 'Play';
+            }
+        });
+    </script>
+</body>
+</html>
